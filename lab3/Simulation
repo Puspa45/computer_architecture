@@ -1,0 +1,8 @@
+ghdl -a encoder_4to2.vhd encoder_tb.vhd
+ghdl -e ENCODER_TB
+ghdl -r ENCODER_TB -- vcd = encoder.vcd
+gtkwave encoder . vcd
+ghdl -a decoder_2to4 . vhd decoder_tb.vhd
+ghdl -e DECODER_TB
+ghdl -r DECODER_TB -- vcd = decoder.vcd
+gtkwave decoder.vcd
