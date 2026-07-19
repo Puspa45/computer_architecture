@@ -1,0 +1,8 @@
+ghdl -a mux_4to1.vhd mux_tb.vhd
+ghdl -e MUX_TB
+ghdl -r MUX_TB -- vcd = mux.vcd
+gtkwave mux . vcd
+ghdl -a demux_1to4 . vhd demux_tb.vhd
+ghdl -e DEMUX_TB
+ghdl -r DEMUX_TB -- vcd = demux.vcd
+gtkwave demux.vcd
